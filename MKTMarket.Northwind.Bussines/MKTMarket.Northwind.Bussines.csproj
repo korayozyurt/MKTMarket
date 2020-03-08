@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MKTMarket.Core\MKTMarket.Core.csproj" />
+    <ProjectReference Include="..\MKTMarket.Northwind.DataAccess\MKTMarket.Northwind.DataAccess.csproj" />
+    <ProjectReference Include="..\MKTMarket.Northwind.Entities\MKTMarket.Northwind.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

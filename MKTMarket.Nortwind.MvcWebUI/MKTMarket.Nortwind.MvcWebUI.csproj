@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MKTMarket.Core\MKTMarket.Core.csproj" />
+    <ProjectReference Include="..\MKTMarket.Northwind.Bussines\MKTMarket.Northwind.Bussines.csproj" />
+    <ProjectReference Include="..\MKTMarket.Northwind.Entities\MKTMarket.Northwind.Entities.csproj" />
+  </ItemGroup>
+
+</Project>
