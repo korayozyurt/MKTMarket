@@ -12,6 +12,7 @@ using MKTMarket.Northwind.Bussines.Concrete;
 using MKTMarket.Northwind.DataAccess.Abstract;
 using MKTMarket.Northwind.DataAccess.Concrete.EntityFramework;
 using MKTMarket.Nortwind.MvcWebUI.Middlewares;
+using MKTMarket.Nortwind.MvcWebUI.Services;
 
 namespace MKTMarket.Nortwind.MvcWebUI
 {
@@ -26,6 +27,14 @@ namespace MKTMarket.Nortwind.MvcWebUI
 
             services.AddScoped<IProductDal, EfProductDal>();
             services.AddScoped<ICategorytDal, EfCategoryDal>();
+
+            services.AddSingleton<ICartSessionService, CartSessionService>();
+            services.AddSingleton<ICartService, CartService>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+            services.AddSession();
+            services.AddDistributedMemoryCache();
+
             services.AddMvc();
         }
 
@@ -41,6 +50,7 @@ namespace MKTMarket.Nortwind.MvcWebUI
             app.UseFileServer();
             app.UseNodeModules(env.ContentRootPath);
 
+            app.UseSession();
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>

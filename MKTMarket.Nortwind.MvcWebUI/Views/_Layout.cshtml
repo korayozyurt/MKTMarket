@@ -24,6 +24,13 @@
                     <a class="nav-link" href="#">Link</a>
                 </li>
 
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    @await Component.InvokeAsync("CartSummary")
+                </li>
+
             </ul>
         </div>
     </nav>
@@ -33,6 +40,10 @@
                 @await Component.InvokeAsync("CategoryList")
             </div>
             <div class="col-md-10">
+                @if (TempData["message"] != null)
+                {
+                    <div class="alert alert-info" role="alert">@TempData["message"]</div>
+                }
                 @RenderBody()
             </div>
         </div>

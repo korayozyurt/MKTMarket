@@ -41,5 +41,9 @@ namespace MKTMarket.Northwind.Bussines.Concrete
             _productDal.Delete(new Product { ProductId = productId });
         }
 
+        public Product GetById(int productId)
+        {
+            return _productDal.Get(p => p.ProductId == productId);
+        }
     }
 }

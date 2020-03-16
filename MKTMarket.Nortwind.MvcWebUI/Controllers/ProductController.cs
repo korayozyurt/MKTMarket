@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using MKTMarket.Northwind.Bussines.Abstract;
 using MKTMarket.Nortwind.MvcWebUI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace MKTMarket.Nortwind.MvcWebUI.Controllers
@@ -32,5 +34,9 @@ namespace MKTMarket.Nortwind.MvcWebUI.Controllers
 
             return View(model);
         }
+
+     
+
     }
+
 }
